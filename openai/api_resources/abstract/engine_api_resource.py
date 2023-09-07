@@ -72,10 +72,10 @@ class EngineAPIResource(APIResource):
     ):
         # TODO: This is just a temporary hack to get the team125 models working
         if params.get("model", None) == "text-embedding-ada-002":
-            params['engine'] = 'text-embedding-ada-002_team125'
+            params['engine'] = 'text-embedding-ada-002_team1550'
             # print("Set engine to text-embedding-ada-002_team125")
-        if params.get("model", None) == "gpt-35-turbo" or params.get("model", None) == "gpt-3.5-turbo":
-            params['engine'] = 'gpt-35-turbo_team125'
+        if params.get("model", None) == "gpt-35-turbo-16k" or params.get("model", None) == "gpt-3.5-turbo":
+            params['engine'] = 'gpt-35-turbo-16k_team1550'
             # print("Set engine to gpt-35-turbo_team125")
 
         deployment_id = params.pop("deployment_id", None)
